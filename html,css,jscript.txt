@@ -424,5 +424,333 @@ Assignment 5:
 </body>
 </html>
 -------------------------------------------------------------------------------------------------------
+implementation:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+  <script src="script.js"></script>  
+    <!-- <script src="employee.js"></script> -->
+    <!-- <script type="module" src="main.js"></script> -->
+   
+</head>
+<body>
+    <!-- <h1 id="message"></h1> -->
+ <h1>I am a body of this Page</h1>
+ 
+</body>
+</html>
+................
+jscript:
+
+/*
+console.log("Hi");// dynamically typed programming language
+var c=9; //outdated
+let a=10;
+const pi=3.14;
+console.log('a value is '+a);
+console.log('pi value is '+pi);
+console.log('c value is '+c);
+*/
+ 
+/* //try alert box
+let uname=prompt("Enter ur name?");
+console.log("entered name is "+uname);
+*/
+ 
+/*
+ 
+//if else
+let age=60; let gender='female';
+ 
+if(age>60 && gender=='female'){
+console.log("u can avail special conc");
+}
+else
+{
+console.log("sorry , u can not");
+}
+ 
+console.log("bye");
+ 
+*/
+ 
+// Looping statement - for, while,do while
+ 
+/*
+for(let i=1;i<=5;i++){
+  //  console.log("Hello");
+    console.log(i);
+ }
+*/
+ 
+/*
+let i=10;
+while(i>=1){
+    console.log(i);
+    i--;
+ 
+}
+*/
+ 
+ 
+/*let i=10;
+ 
+do{
+    console.log(i);
+    i--;
+}
+while(i>=1);
+*/
+ 
+/*
+let arr=['Maria','priya','swathi','archu'];
+//for loop
+for(i=0;i<arr.length;i++){
+    console.log(arr[i]);
+}
+//for each loop
+for(let name1 of  arr){
+    console.log(name1);
+}
+*/
+ 
+/* //example function 1
+ function addNumbers(a,b){// defining the function
+    return a+b;
+   
+ }
+ console.log(addNumbers(4,5)); // calling the function
+console.log(addNumbers);
+console.log(typeof(addNumbers));
+*/
+/*
+//example function 2
+function isPositive(num){
+     return num>0
+}
+console.log(isPositive(3));
+*/
+/*
+//example function 3
+function sayHello(){
+    console.log('Hello');
+}
+sayHello();//Hello
+*/
+ 
+/*
+//example function 4 // default parameter
+function greet(uname ='there'){
+    console.log('hi',uname)
+}
+greet('Maria');
+*/
+/*
+//example function 5
+let isEven =function(num){
+    return num%2==0
+}
+console.log(isEven(6));
+*/
+ 
+let volume=function(l,b,h){
+    return l*b*h;
+    }
+  //  console.log(volume(1,2,3));
+ 
+    let volume1=(l,b,h) =>l*b*h;
+    console.log(volume1(1,2,3));
+
+...............................................................................................
+
+another jscript:
+
+class Employee {
+    // Private fields
+    #name;
+    #age;
+ 
+    // Static field
+    static company = 'Tech Corp';
+ 
+    // Constructor
+    constructor(name, age) {
+        this.#name = name;
+        this.#age = age;
+    }
+ 
+    // Getter for name
+    get name() {
+        return this.#name;
+    }
+// ==(value check) ===(type check)
+    // Setter for name
+    set name(newName) {
+        if (typeof newName === 'string' && newName.length > 0) {
+            this.#name = newName;
+        } else {
+            console.error('Invalid name');
+        }
+    }
+ 
+    // Getter for age
+    get age() {
+        return this.#age;
+    }
+ 
+    // Setter for age
+    set age(newAge) {
+        if (Number.isInteger(newAge) && newAge > 0) {
+            this.#age = newAge;
+        } else {
+            console.error('Invalid age');
+        }
+    }
+ 
+    // Method
+    describe() {
+        console.log(`Employee: ${this.#name}, Age: ${this.#age}`);
+    }
+ 
+    // Static method
+    static companyInfo() {
+        console.log(`Company: ${Employee.company}`);
+    }
+ 
+    // Private method
+    #privateMethod() {
+        console.log('This is a private method.');
+    }
+ 
+    // Method to demonstrate access to private method
+    publicMethod() {
+        this.#privateMethod();
+    }
+}
+ 
+// Creating an instance of the class
+const emp1 = new Employee('Alice', 30);
+ 
+// Accessing static method
+Employee.companyInfo(); // Output: Company: Tech Corp
+ 
+// Accessing instance methods
+emp1.describe(); // Output: Employee: Alice, Age: 30
+ 
+// Using getter and setter
+console.log(emp1.name); // Output: Alice
+emp1.name = 'Bob';
+console.log(emp1.name); // Output: Bob
+ 
+console.log(emp1.age); // Output: 30
+emp1.age = 35;
+console.log(emp1.age); // Output: 35
+ 
+// Attempting to set invalid values
+emp1.name = ''; // Output: Invalid name
+emp1.age = -5; // Output: Invalid age
+ 
+// Accessing public method which in turn accesses private method
+emp1.publicMethod(); // Output: This is a private method.
+ 
+ 
+ 
+ 
+ 
+ 
+/*
+Private Fields:
+Private fields are defined with the # prefix and can only
+be accessed within the class.
+#name;
+#age;
+ 
+Static Field:
+Static fields are defined using the static keyword.
+They are shared among all instances of the class.
+static company = 'Tech Corp';
+ 
+Constructor:
+The constructor method is used to initialize the instance
+properties.
+constructor(name, age) {
+    this.#name = name;
+    this.#age = age;
+}
+ 
+Getter and Setter:
+Getters and setters allow controlled access and modification
+of private fields.
+ 
+get name() {
+    return this.#name;
+}
+ 
+set name(newName) {
+    if (typeof newName === 'string' && newName.length > 0) {
+        this.#name = newName;
+    } else {
+        console.error('Invalid name');
+    }
+}
+ 
+Instance Methods:
+Methods that operate on instances of the class.
+describe() {
+    console.log(`Employee: ${this.#name}, Age: ${this.#age}`);
+}
+ 
+Static Methods:
+Methods that operate on the class itself rather than instances.
+static companyInfo() {
+    console.log(`Company: ${Employee.company}`);
+}
+ 
+Private Methods:
+Private methods are also defined with the # prefix and can
+only be called within the class.
+#privateMethod() {
+    console.log('This is a private method.');
+}
+*/
+
+..............................................
+eclipse use :
+
+// Importing named exports
+import { add, subtract } from './math.js';
+ 
+// Importing default export
+import pi from './math.js';
+ 
+console.log('This is main class and the methods are exported from math.js');
+console.log(add(2, 3));        // Output: 5
+console.log(subtract(5, 3));   // Output: 2
+console.log(pi);               // Output: 3.14159
+
+
+...........................................................
+
+ex:2
+
+// Named export
+export function add(a, b) {
+    return a + b;
+}
+ 
+export function subtract(a, b) {
+    return a - b;
+}
+ 
+// Default export
+const pi = 3.14159;
+export default pi;
+
+------------------------------------------
 
 
