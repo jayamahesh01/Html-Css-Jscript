@@ -784,3 +784,73 @@ changeName("Jane Doe");
 updateEmail("janedoe@example.com");
 console.log("Updated user:", user);
 console.log("Birth year:", calculateBirthYear());
+-------------------------------------------------------
+assignment 2:
+html":
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <button type="submit">Submit</button>
+        <div id="message" class="error"></div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+------------------------------------------------------------------------------------
+jscript:
+
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    validateEmail();
+});
+
+function validateEmail() {
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(email)) {
+        message.textContent = '';
+        alert('Email is valid');
+    } else {
+        message.textContent = 'Invalid email format';
+    }
+}
+
+--------------------------------------------
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    validateEmail();
+});
+
+function validateEmail() {
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(email)) {
+        message.textContent = '';
+        alert('Email is valid');
+    } else {
+        message.textContent = 'Invalid email format';
+    }
+}
+
+--------------------------------------------------------
