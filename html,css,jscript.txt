@@ -753,4 +753,34 @@ export default pi;
 
 ------------------------------------------
 
+Assignment 1:
 
+// Create a user object
+let user = {
+    name: "John Doe",
+    email: "johndoe@example.com",
+    age: 30
+};
+
+// Function to change the user's name
+function changeName(newUser) {
+    user.name = newUser;
+}
+
+// Function to update the user's email
+function updateEmail(newEmail) {
+    user.email = newEmail;
+}
+
+// Function to calculate the user's birth year
+function calculateBirthYear() {
+    let currentYear = new Date().getFullYear();
+    return currentYear - user.age;
+}
+
+// Test the functions
+console.log("Original user:", user);
+changeName("Jane Doe");
+updateEmail("janedoe@example.com");
+console.log("Updated user:", user);
+console.log("Birth year:", calculateBirthYear());
