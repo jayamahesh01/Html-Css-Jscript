@@ -698,3 +698,142 @@ public class LibraryManagementSystem {
 }
 ----------------------------------------------------------------------------
 
+2nd time:
+
+Book.java:
+
+java
+Copy code
+public class Book implements Comparable<Book> {
+    private String title;
+    private String author;
+    private String ISBN;
+
+    public Book(String title, String author, String ISBN) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    @Override
+    public int compareTo(Book other) {
+        return this.title.compareTo(other.title);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", ISBN='" + ISBN + '\'' +
+                '}';
+    }
+}
+Library.java:
+
+java
+Copy code
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Library {
+    private List<Book> books;
+
+    public Library() {
+        books = new ArrayList<>();
+    }
+
+    public void addBook(Book book) {
+        books.add(book);
+        Collections.sort(books);
+    }
+
+    public void removeBook(String title) {
+        books.removeIf(book -> book.getTitle().equals(title));
+    }
+
+    public Book linearSearchByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equals(title)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public Book binarySearchByTitle(String title) {
+        int left = 0;
+        int right = books.size() - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            int cmp = books.get(mid).getTitle().compareTo(title);
+            if (cmp == 0) {
+                return books.get(mid);
+            } else if (cmp < 0) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return null;
+    }
+
+    public void displayAllBooks() {
+        for (Book book : books) {
+            System.out.println(book);
+        }
+    }
+}
+LibraryManagementSystem.java:
+
+java
+Copy code
+public class LibraryManagementSystem {
+    public static void main(String[] args) {
+        Library library = new Library();
+
+        // Adding books to the library
+        library.addBook(new Book("Java Programming", "John Doe", "1234567890"));
+        library.addBook(new Book("Data Structures", "Jane Smith", "0987654321"));
+
+        // Display all books
+        System.out.println("All Books:");
+        library.displayAllBooks();
+
+        // Linear Search
+        System.out.println("\nSearching for 'Java Programming' using Linear Search:");
+        Book linearSearchBook = library.linearSearchByTitle("Java Programming");
+        System.out.println("Found: " + linearSearchBook);
+
+        // Binary Search
+        System.out.println("\nSearching for 'Data Structures' using Binary Search:");
+        Book binarySearchBook = library.binarySearchByTitle("Data Structures");
+        System.out.println("Found: " + binarySearchBook);
+    }
+
+}
