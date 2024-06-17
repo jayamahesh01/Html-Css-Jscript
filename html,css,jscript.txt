@@ -1,402 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar Example</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home">
-        <h1>Welcome to Home</h1>
-        <p>This is the home section.</p>
-    </section>
-    <section id="about">
-        <h1>About Us</h1>
-        <p>This is the about section.</p>
-    </section>
-    <section id="services">
-        <h1>Our Services</h1>
-        <p>This is the services section.</p>
-    </section>
-    <section id="contact">
-        <h1>Contact Us</h1>
-        <p>This is the contact section.</p>
-    </section>
-</body>
-</html>
 
-assign 1 Css..........
-body {
-    font-family: Arial, sans-serif;
-}
-
-nav {
-    background-color: #333;
-}
-
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.navbar li {
-    float: left;
-}
-
-.navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar li a:hover {
-    background-color: #111;
-}
-
-.navbar li a.active {
-    background-color: #4CAF50;
-}
-
---------------------------------------------------------------
-Assignment 2:
-html:
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Simple HTML Page</h1>
-    </header>
-    <section>
-        <h2>About This Page</h2>
-        <p>This page is a simple HTML document that demonstrates basic HTML structure and elements.</p>
-    </section>
-    <article>
-        <h2>Article Section</h2>
-        <p>This section contains an article about HTML structure and elements.</p>
-    </article>
-    <section>
-        <h2>Sample Data Table</h2>
-        <table border="1">
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-                <th>Column 3</th>
-            </tr>
-            <tr>
-                <td>Row 1, Cell 1</td>
-                <td>Row 1, Cell 2</td>
-                <td>Row 1, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td>
-                <td>Row 2, Cell 3</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <h2>Contact Form</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-</body>
-</html>
-
-
-assgn 2 :
-Css:
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-header, section, article {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-header {
-    background-color: #f4f4f4;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
-form {
-    margin: 20px 0;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    padding: 10px 15px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-------------------------------------------------------------------------------------------
-assignment 3: html;;;;
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Column Layout</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="column">Column 1 Content</div>
-        <div class="column">Column 2 Content</div>
-        <div class="column">Column 3 Content</div>
-    </main>
-    <footer>
-        <p>Footer Content</p>
-    </footer>
-</body>
-</html>
-
-
-
-assignment css.......
-* {
-    box-sizing: border-box;
-}
-
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #111;
-}
-
-/* Main content */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1em;
-}
-
-.column {
-    flex: 1;
-    padding: 1em;
-    margin: 1em;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-
------------------------------------------------------------------------------------------------------------
-assignment 4:
-html
-
-nav ul li a {
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #111;
-}
-
-/* Example form animation */
-form input {
-    transition: all 0.3s ease-in-out;
-}
-
-form input:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    nav ul li {
-        float: none;
-    }
-
-    .column {
-        flex: 100%;
-        margin: 0;
-    }
-}
-
-assignment csss......
-<form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <input type="submit" value="Submit">
-</form>
----------------------------------------------------------------------------------------------
-
-Assignment 5:
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bootstrap Integration</title>
-    <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Your Brand</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <h2>Sample Table</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>John</td>
                     <td>Doe</td>
                     <td>john.doe@example.com</td>
                 </tr>
@@ -856,3 +458,243 @@ function validateEmail() {
 --------------------------------------------------------
 html url:::
 file:///C:/Users/Administrator/Desktop/HTML,CSS,J%20SCRIPT%20,%20ANGULAR/demo4.html
+
+---------------------------------------------------------------------------------------------
+class1:
+
+import java.util.LinkedList;
+
+class ShoppingCart {
+    private LinkedList<String> cart;
+
+    public ShoppingCart() {
+        cart = new LinkedList<>();
+    }
+
+    public void addItem(String item) {
+        cart.add(item);
+    }
+
+    public void removeItem(String item) {
+        cart.remove(item);
+    }
+
+    public void viewCart() {
+        System.out.println("Items in cart: " + cart);
+    }
+}
+
+class 2:
+import java.util.LinkedList;
+import java.util.Stack;
+
+class PurchaseHistory {
+    private Stack<LinkedList<String>> history;
+
+    public PurchaseHistory() {
+        history = new Stack<>();
+    }
+
+    public void saveCart(LinkedList<String> cart) {
+        history.push(cart);
+    }
+
+    public LinkedList<String> undoPurchase() {
+        if (!history.isEmpty()) {
+            return history.pop();
+        }
+        return null;
+    }
+
+    public void viewHistory() {
+        System.out.println("Purchase history: " + history);
+    }
+}
+
+----------------------------------------------------------------------
+
+class3:
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+class CustomerService {
+    private Queue<String> serviceRequests;
+
+    public CustomerService() {
+        serviceRequests = new LinkedList<>();
+    }
+
+    public void addRequest(String request) {
+        serviceRequests.add(request);
+    }
+
+    public void processRequest() {
+        if (!serviceRequests.isEmpty()) {
+            System.out.println("Processing request: " + serviceRequests.poll());
+        } else {
+            System.out.println("No pending requests.");
+        }
+    }
+
+    public void viewRequests() {
+        System.out.println("Pending service requests: " + serviceRequests);
+    }
+}
+
+class4:
+
+public class ShoppingApp {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        PurchaseHistory history = new PurchaseHistory();
+        CustomerService service = new CustomerService();
+
+        // Sample operations
+        cart.addItem("Item 1");
+        cart.addItem("Item 2");
+        cart.viewCart();
+
+        LinkedList<String> currentCart = new LinkedList<>(cart.cart);
+        history.saveCart(currentCart);
+        history.viewHistory();
+
+        cart.removeItem("Item 1");
+        cart.viewCart();
+
+        LinkedList<String> undoCart = history.undoPurchase();
+        if (undoCart != null) {
+            System.out.println("Undoing last purchase.");
+            cart.cart = undoCart;
+            cart.viewCart();
+        } else {
+            System.out.println("Nothing to undo.");
+        }
+
+        service.addRequest("Request 1");
+        service.addRequest("Request 2");
+        service.viewRequests();
+        service.processRequest();
+        service.viewRequests();
+    }
+}
+
+-------------------------------------------------------------------------------------------------
+class 1:
+class Book implements Comparable<Book> {
+    private String title;
+    private String author;
+    private String ISBN;
+
+    public Book(String title, String author, String ISBN) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public int compareTo(Book other) {
+        return this.title.compareTo(other.title);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", ISBN='" + ISBN + '\'' +
+                '}';
+    }
+}
+
+class 2:
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Library {
+    private List<Book> books;
+
+    public Library() {
+        books = new ArrayList<>();
+    }
+
+    public void addBook(Book book) {
+        books.add(book);
+        Collections.sort(books); // Ensure the list remains sorted for Binary Search
+    }
+
+    public void removeBook(String title) {
+        books.removeIf(book -> book.getTitle().equals(title));
+    }
+
+    public Book linearSearchByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equals(title)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public Book binarySearchByTitle(String title) {
+        int low = 0;
+        int high = books.size() - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            Book midBook = books.get(mid);
+            int cmp = midBook.getTitle().compareTo(title);
+
+            if (cmp == 0) {
+                return midBook;
+            } else if (cmp < 0) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return null;
+    }
+
+    public void displayAllBooks() {
+        System.out.println("Books in the library:");
+        for (Book book : books) {
+            System.out.println(book);
+        }
+    }
+}
+
+
+class 3:
+
+public class LibraryManagementSystem {
+    public static void main(String[] args) {
+        Library library = new Library();
+
+        // Adding books to the library
+        library.addBook(new Book("Book1", "Author1", "ISBN1"));
+        library.addBook(new Book("Book2", "Author2", "ISBN2"));
+        library.addBook(new Book("Book3", "Author3", "ISBN3"));
+
+        // Display all books
+        library.displayAllBooks();
+
+        // Linear Search
+        System.out.println("Searching for Book2 using Linear Search:");
+        Book linearSearchResult = library.linearSearchByTitle("Book2");
+        System.out.println(linearSearchResult != null ? linearSearchResult : "Book not found");
+
+        // Binary Search
+        System.out.println("Searching for Book2 using Binary Search:");
+        Book binarySearchResult = library.binarySearchByTitle("Book2");
+        System.out.println(binarySearchResult != null ? binarySearchResult : "Book not found");
+    }
+}
+----------------------------------------------------------------------------
+
